@@ -12,12 +12,11 @@ namespace VendorAndOrderTracker.Models
 
     public Vendor(string vendorName, string description)
     {
-      // Name = vendorName;
-      // Description = description;
-      // _instances.Add(this);
-      // Id = _instances.Count;
+      Name = vendorName;
+      Description = description;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
-
 
   }
 }
