@@ -3,7 +3,33 @@ div#footer {
   bottom:0px;
   left:0px;
   width:100%;
-  color:rgb(224, 247, 238);
-  background:rgb(18, 131, 93);
+  color:rgb(253, 243, 231);
+  background: rgb(121, 110, 104);
   padding:7px;
+}
+
+body {
+  margin: 50px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: center;
+  background-color: rgb(152, 185, 174);
+}
+
+h1 {
+  color: rgb(188, 105, 87);
+}
+
+h3 {
+  color: rgb(60, 48, 36);
+}
+
+a {
+  color:rgb(253, 243, 231);
+}
+
+a:hover {
+  color: rgb(60, 48, 36);
+  font-size: larger;
 }
