@@ -79,5 +79,18 @@ namespace VendorAndOrderTracker.Tests
 
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string description01 = "50 lbs whole wheat flour";
+      string description02 = "10 lbs of brown sugar";
+      Order newOrder1 = new Order(description01);
+      Order newOrder2 = new Order(description02);
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
