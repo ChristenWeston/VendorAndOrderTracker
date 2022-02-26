@@ -21,5 +21,15 @@ namespace VendorAndOrderTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetOrderDescription_ReturnsOrderDescription_String()
+    {
+      string description = "100 cases of Olives";
+      Order newOrder = new Order(description);
+      
+      string result = newOrder.Description;
+      
+      Assert.AreEqual(description, result);
+    }
   }
 }
