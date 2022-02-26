@@ -8,6 +8,26 @@ div#footer {
   padding:7px;
 }
 
+/* .flex-container {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-basis: 50px;
+} */
+
+ol {
+  width: 50%;
+  border-width: 2px;
+  border-color: black;
+}
+
 body {
   margin: 50px;
   background-size:cover;
