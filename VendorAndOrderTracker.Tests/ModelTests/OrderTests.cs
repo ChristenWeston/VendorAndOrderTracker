@@ -55,6 +55,16 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
+    public void GetOrderPrice_ReturnsOrderPrice_Double()
+    {
+      double price = 1.99;
+      string priceForOrder = "1.99";
+      Order newOrder = new Order("Order1", "OrderTitle", priceForOrder, "OrderDate");
+
+      Assert.AreEqual(price, newOrder.Price, 0.00000001);
+    }
+
+    [TestMethod]
     public void SetOrderDescription_SetDescription_String()
     {
       string description = "10 cases of olives";
