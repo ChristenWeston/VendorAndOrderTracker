@@ -8,6 +8,8 @@ div#footer {
   padding:7px;
 }
 
+
+
 /* .flex-container {
   display: flex;
   justify-content: center;
@@ -39,6 +41,11 @@ body {
 
 h1 {
   color: rgb(188, 105, 87);
+}
+
+h2 {
+  font-size: x-small;
+  color:rgb(188, 105, 87);
 }
 
 h3 {
