@@ -33,6 +33,17 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
+    public void GetOrderTitle_ReturnsOrderTitle_String()
+    {
+      string title = "New Order from Luis";
+      Order newOrder = new Order("description", title, "1.99", "orderDate");
+      
+      string result = newOrder.Title;
+      
+      Assert.AreEqual(title, result);
+    }
+
+    [TestMethod]
     public void SetOrderDescription_SetDescription_String()
     {
       string description = "10 cases of olives";
