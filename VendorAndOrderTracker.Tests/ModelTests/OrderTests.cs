@@ -44,6 +44,17 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
+    public void GetOrderDate_ReturnsOrderDate_String()
+    {
+      string date = "1/1/2022";
+      Order newOrder = new Order("description", "title", "1.99", date);
+      
+      string result = newOrder.Date;
+      
+      Assert.AreEqual(date, result);
+    }
+
+    [TestMethod]
     public void SetOrderDescription_SetDescription_String()
     {
       string description = "10 cases of olives";
