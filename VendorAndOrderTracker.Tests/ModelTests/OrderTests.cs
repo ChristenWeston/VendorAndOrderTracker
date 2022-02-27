@@ -17,7 +17,7 @@ namespace VendorAndOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstancesOfOrder_Order()
     {
-      Order newOrder = new Order("Order1");
+      Order newOrder = new Order("Order1", "OrderTitle", "1.99", "OrderDate");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace VendorAndOrderTracker.Tests
     public void GetOrderDescription_ReturnsOrderDescription_String()
     {
       string description = "100 cases of Olives";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, "orderTitle", "1.99", "orderDate");
       
       string result = newOrder.Description;
       
@@ -36,7 +36,7 @@ namespace VendorAndOrderTracker.Tests
     public void SetOrderDescription_SetDescription_String()
     {
       string description = "10 cases of olives";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, "orderTitle", "1.99", "orderDate");
 
       string updatedDescription = "20 cases of olives";
       newOrder.Description = updatedDescription;
@@ -60,8 +60,8 @@ namespace VendorAndOrderTracker.Tests
     {
       string description01 = "300 crates of apples";
       string description02 = "200 lbs of flour";
-      Order newOrder1 = new Order(description01);
-      Order newOrder2 = new Order(description02);
+      Order newOrder1 = new Order(description01, "orderTitle", "1.99", "orderDate");
+      Order newOrder2 = new Order(description02, "orderTitle2", "2.99", "orderDate2");
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
@@ -73,7 +73,7 @@ namespace VendorAndOrderTracker.Tests
     public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
     {
       string description = "1 lb of salt";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, "orderTitle", "1.99", "orderDate");
 
       int result = newOrder.Id;
 
@@ -85,8 +85,8 @@ namespace VendorAndOrderTracker.Tests
     {
       string description01 = "50 lbs whole wheat flour";
       string description02 = "10 lbs of brown sugar";
-      Order newOrder1 = new Order(description01);
-      Order newOrder2 = new Order(description02);
+      Order newOrder1 = new Order(description01, "orderTitle", "1.99", "orderDate");
+      Order newOrder2 = new Order(description02, "orderTitle2", "2.99", "orderDate2");
 
       Order result = Order.Find(2);
 
