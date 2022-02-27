@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+      @using VendorAndOrderTracker.Models;
+
+      <h1>Orders</h1>
+
+      <ul>
+        @foreach (Order order in @Model["orders"])
+        {
+          <li><a href='/orders/@order.Id'>@order.Description</a></li>
+        }
+      </ul>
+
+      <a href="/orders/new">Add a new order</a>
+
+      <form action="/orders/delete" method="post">
+        <button type="submit" name="button">Clear All Orders</button>
+      </form>
